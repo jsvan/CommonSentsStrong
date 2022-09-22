@@ -13,8 +13,8 @@ For example:
         
 **Hotkeys:**
 Set:
-1. context with ALT+SHIFT+C
-2. negative with ALT+SHIFT+N
-3. neutral with ALT+SHIFT+K
-4. positive with ALT+SHIFT+P
+1. context with ALT+C
+2. negative with ALT+N
+3. neutral with ALT+K
+4. positive with ALT+P
          
