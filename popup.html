@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+<head>
+    <title>Common Sents</title>
+    <style>
+        .boxdiv {
+            border: 1px groove WhiteSmoke;
+            padding: 7px;
+        }
+        .myPadding {
+            padding: 9px;
+        }
+        body {
+            font-size: 1em;
+        }
+        button button {
+            width: 100%;
+        }
+        #survey {
+            display: block;
+        }
+        #collapsed {
+            display: none;
+        }
+
+
+
+    </style>
+</head>
+<body style="background-color: #fff4eb; min-width: 250px;">
+    <div class="myPadding">
+        <div class="boxdiv" style="text-align:center">
+            <br>
+            <img src="images/CSicon102.png">
+            <br><br>
+
+
+            <table >
+                <ti>
+                    <u><span id="highlighttext">text highlighting</span></u>
+                </ti>
+                <ti>
+                    <button id="highlight"></button>
+                </ti>
+            </table>
+
+            <br>
+            <div style="text-align: center; ">
+                <button id="storage" style="font-size: 1em;">View your Samples</button>
+            </div>
+
+            <br>
+            <a id="instructions" href="popup.html">Usage Instructions</a>
+            <br>
+            <a id="privacypolicy" , href="popup.html"> Privacy Policy </a>
+
+        </div>
+
+        <br>
+
+        <div id="collapsed" style="text-align: center;">
+            Your survey answers have been saved. Thanks!<br><br>
+            <button id="editsurvey">Edit Survey Responses</button>
+        </div>
+
+        <div id="survey">
+            <div class="boxdiv">
+                <p id="QReminder" style="transform: rotate(-8deg); color:white; border:2px solid #a3dfff; text-align:center; background-color:#FFB570;">
+                    <i>Please fill me out! :)</i>
+                </p>
+
+                <h3>Worldview questionaire</h3>
+                <p>
+                    <i>We prefer to have a variety of worldviews, perspectives, and media bubbles contributing to our
+                        dataset. </i>
+                </p>
+                <p>
+                    <i>Therefore we ask you to indicate how well you agree with the following statements:</i>
+                </p>
+                <br>
+
+                <label for="wealth"><b>It is the responsibility of the government to reduce the differences in income between
+                    people with high incomes and those with low incomes. </b></label><br><br>
+                <input type="radio" name="wealth" value="1">1 - Strongly Agree</input><br>
+                <input type="radio" name="wealth" value="2">2 - Agree </input><br>
+                <input type="radio" name="wealth" value="3">3 - Neither agree nor disagree</input><br>
+                <input type="radio" name="wealth" value="4">4 - Disagree</input><br>
+                <input type="radio" name="wealth" value="5">5 - Strongly disagree</input><br>
+                <input type="radio" name="wealth" value="6">6 - Can't choose/ Don't know/ Refuse</input>
+
+                <br><br><br>
+
+                <label for="nationalism"><b>The people of my nation are not perfect but our culture is superior to
+                    others.</b></label><br><br>
+                <input type="radio" name="nationalism" value="1">1 - Strongly Agree</input><br>
+                <input type="radio" name="nationalism" value="2">2 - Agree</input><br>
+                <input type="radio" name="nationalism" value="3">3 - Neither agree nor disagree</input><br>
+                <input type="radio" name="nationalism" value="4">4 - Disagree</input><br>
+                <input type="radio" name="nationalism" value="5">5 - Strongly disagree</input><br>
+                <input type="radio" name="nationalism" value="6">6 - Can't choose/ Don't know/ Refuse</input>
+
+
+                <br><br><br>
+
+                <label for="country"><b>Which country do you live in?</b></label><br>
+                <input type="text" id="country">
+
+                <br><br><br>
+
+                <!--
+                <label for="group_identity"><b>How would you define yourself, using one or two words?</b> <br>(ex. Progressive Liberal,
+                    Globalist, Libertarian, Terrified Musician, etc.)</label><br>
+                <input type="text" id="group_identity">
+                -->
+                <label for="group_identity"><b>With respect to your political ideology, do you consider yourself to the left or
+                    right of most citizens in your country?</b></label><br><br>
+                <input type="radio" name="group_identity" value="1">1 - More to the left</input><br>
+                <input type="radio" name="group_identity" value="2">2 - Somewhat to the left</input><br>
+                <input type="radio" name="group_identity" value="3">3 - Neither to the left nor to the right</input><br>
+                <input type="radio" name="group_identity" value="4">4 - Somewhat to the right</input><br>
+                <input type="radio" name="group_identity" value="5">5 - More to the right</input><br>
+                <input type="radio" name="group_identity" value="6">6 - Can't choose/ Don't know/ Refuse</input>
+
+
+                <br><br><br>
+
+                <div style="text-align: center;">
+                    <button id="submit">Save choices</button>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+    <script src="popup.js">
+    </script>
+</body>
+</html>

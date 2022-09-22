@@ -1,0 +1,64 @@
+{
+  "name": "Common Sents Strong",
+  "version": "1.07",
+  "description": "Help Julian locate sentiment-charged sentences while you read your morning news.",
+  "permissions": ["contextMenus", "activeTab", "notifications"],
+  "content_scripts": [
+    {
+      "matches": ["https://*/*", "http://*/*"],
+      "js": ["highlightpage.js"]
+    },
+    {
+      "matches": ["https://abcnews.go.com/*/*", "https://www.msnbc.com/*/*","https://www.themoscowtimes.com/*/*", "https://www.vox.com/*/*", "https://www.foreignaffairs.com/*/*","https://www.foxnews.com/*/*","https://www.reuters.com/*/*","https://apnews.com/*/*", "https://www.ft.com/*/*", "https://www.economist.com/*/*","https://meduza.io/*/*","https://www.nytimes.com/*/*", "https://www.washingtonpost.com/*/*", "https://www.theatlantic.com/*/*"],
+      "js": ["prompt.js"]
+    }
+  ],
+  "commands": {
+    "set_context": {
+        "suggested_key": {
+            "default": "Alt+C"
+        },
+        "description": "Set the context"
+    },
+    "set_positive": {
+        "suggested_key": {
+            "default": "Alt+P"
+        },
+        "description": "Label as positive"
+    },
+    "set_negative": {
+        "suggested_key": {
+            "default": "Alt+N"
+        },
+        "description": "Label as negative"
+    },
+    "set_neutral": {
+        "suggested_key": {
+            "default": "Alt+K"
+        },
+        "description": "Label as neutral"
+    }
+  },
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_title": "Sentiment Labeller",
+    "default_icon": { 
+      "16": "images/CSicon16.png",
+      "32": "images/CSicon32.png",
+      "48": "images/CSicon48.png",
+      "128": "images/CSicon128.png"
+    }
+  },
+  "background": { "scripts": ["background.js"] },
+  "icons": {
+    "16": "images/CSicon16.png",
+    "32": "images/CSicon32.png",
+    "48": "images/CSicon48.png",
+    "128": "images/CSicon128.png"
+  },
+  "web_accessible_resources": [
+    "images/CSicon102.png"
+  ],
+  "manifest_version": 2,
+  "minimum_chrome_version": "6"
+}
